@@ -4,6 +4,20 @@ module.exports = {
         description: "Theia is an open-source cloud &nbsp; desktop IDE framework implemented in TypeScript."
     },
     plugins: [
-        'gatsby-plugin-emotion'
+        'gatsby-plugin-emotion',
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: "gatsby-remark-external-links",
+                        options: {
+                            target: "_self",
+                            rel: "nofollow"
+                        }
+                    }
+                ]
+            }
+        }
     ]
 }
