@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { breakpoints } from '../utils/variables'
 import Layout from '../components/Layout'
+import Nav from '../components/Nav'
 import TheiaLogoDark from '../resources/theia-logo-dark.svg'
 import Background from '../resources/background-image.png'
 import TheiaScreenShot from '../resources/theia-screenshot.png'
@@ -25,41 +26,20 @@ import SpectrumLogo from '../resources/spectrum.svg'
 
 const Index = styled.div`
 
-    /* ----------------------------------------- */
-    /* ----- Navigation ----- */
-    /* ----------------------------------------- */
-
-    .nav {
-        margin-bottom: 10rem;
-
-        &__items {
-            display: flex;
-            justify-content: flex-end;
-            list-style: none;
-        }
-
-        &__item {
-            &:not(:last-child) {
-                margin-right: 3rem;
-            }
-        }
-
-        &__link {
-            text-decoration: none;
-            color: inherit;
-        }
-    }
-
     /* ------------------------------------------ */
     /* ----- Header ----- */
     /* ------------------------------------------ */
 
     .header {
+        position: relative;
         background-image: url(${Background});
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 10rem;
         border-bottom: 10px solid #f8f8f8;
+
+        @media(max-width: ${breakpoints.sm}) {
+            padding-top: 15rem;
+        }
 
         &__logo-box {
             margin-bottom: 2rem;
@@ -335,25 +315,7 @@ export default () => {
 
                 <header class='header' role='header'>
                     <div className="row">
-                        <nav class="nav">
-                            <ul className="nav__items">
-                                <li className="nav__item">
-                                    <a href="#features" className="nav__link">Features</a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="#" className="nav__link">Documentation</a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="https://spectrum.chat/theia" target="_blank" className="nav__link">Comunity</a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="https://typefox.io/eclipse-theia" className="nav__link" target="_blank">Support</a>
-                                </li>
-                                <li className="nav__item">
-                                    <a href="https://typefox.io/trainings-2" className="nav__link" target="_blank">Training</a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <Nav />
                         <div className="header__text-box">
                             <div className="header__logo-box">
                                 <img className="header__logo" src={TheiaLogoDark} alt="theia logo" />
