@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { breakpoints } from '../utils/variables'
-import Layout from '../components/Layout'
+import Layout from '../layouts/layout'
 import Nav from '../components/Nav'
 import TheiaLogoDark from '../resources/theia-logo-dark.svg'
 import Background from '../resources/background-image.png'

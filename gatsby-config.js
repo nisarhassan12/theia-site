@@ -34,5 +34,20 @@ module.exports = {
                 plugins: [],
             },
         },
+        {
+            resolve: 'gatsby-plugin-mdx',
+            options: {
+                defaultLayouts: {
+                    default: require.resolve('./src/layouts/layout.js')
+                }
+            }
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'docs',
+                path: `${__dirname}/src/docs`
+            }
+        }
     ]
 }
