@@ -106,7 +106,7 @@ class Nav extends React.Component {
                 <nav className="nav">
                     <div className="nav__button-container">
                         <button
-                            class="nav__button"
+                            className="nav__button"
                             aria-label="Navigation Toggle"
                             onClick={this.toggleNavigation}
                         >
@@ -121,7 +121,7 @@ class Nav extends React.Component {
                                 <a href="#features" className="nav__link">Features</a>
                             </li>
                             <li className="nav__item" onClick={event}>
-                                <Link to="#" className="nav__link">Documentation</Link>
+                                <Link to="/docs" className="nav__link">Documentation</Link>
                             </li>
                             <li className="nav__item" onClick={event}>
                                 <a href="https://spectrum.chat/theia" target="_blank" className="nav__link">Comunity</a>

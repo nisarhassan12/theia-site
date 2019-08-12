@@ -313,7 +313,7 @@ export default () => {
 
                 {/* ***** Header ***** */}
 
-                <header class='header' role='header'>
+                <header className='header' role='header'>
                     <div className="row">
                         <Nav />
                         <div className="header__text-box">
