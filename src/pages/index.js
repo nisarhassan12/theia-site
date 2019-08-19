@@ -3,9 +3,10 @@ import styled from '@emotion/styled'
 import { breakpoints } from '../utils/variables'
 import Layout from '../layouts/layout'
 import Nav from '../components/Nav'
+import Screenshot from '../components/Screenshot'
+import Footer from '../components/Footer'
 import TheiaLogoDark from '../resources/theia-logo-dark.svg'
 import Background from '../resources/background-image.png'
-import TheiaScreenShot from '../resources/theia-screenshot.png'
 import TypeFoxLogo from '../resources/typefox.png'
 import RedHatLogo from '../resources/redhat.svg'
 import IBMLogo from '../resources/ibm.svg'
@@ -20,9 +21,6 @@ import TheiaLogoEdited from '../resources/theia-logo-edited.svg'
 import CompletionVideo from '../resources/completion.mp4'
 import TermianlVideo from '../resources/terminal.mp4'
 import LayoutVideo from '../resources/layout.mp4'
-import TwitterLogo from '../resources/twitter.svg'
-import GithubLogo from '../resources/github.svg'
-import SpectrumLogo from '../resources/spectrum.svg'
 
 const Index = styled.div`
 
@@ -37,7 +35,7 @@ const Index = styled.div`
         background-repeat: no-repeat;
         border-bottom: 10px solid #f8f8f8;
 
-        @media(max-width: ${breakpoints.sm}) {
+        @media(max-width: ${breakpoints.xmd}) {
             padding-top: 15rem;
         }
 
@@ -75,13 +73,7 @@ const Index = styled.div`
         }
 
         &__screenshot {
-            width: 100%;
-            background: #fff;
 
-            &-container {
-                max-width: 114.5rem;
-                margin: 0 auto;
-            }
         }
     }
 
@@ -268,42 +260,6 @@ const Index = styled.div`
         }
     }
 
-    /* ------------------------------------------ */
-    /* ----- Footer ----- */
-    /* ------------------------------------------ */
-
-    .footer {
-        padding: 4rem 0;
-        text-align: center;
-        background-image: url(${Background});
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-top: 10px solid #f8f8f8;
-
-
-        &__icons {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        &__icon {
-            height: 3rem;
-            display: block;
-        }
-
-        a {
-            &:not(:last-child) {
-                margin-right: 1.5rem;
-            }
-        }
-
-        &__copyright {
-            margin-top: 5rem;
-        }
-    }
-
 `
 
 export default () => {
@@ -331,9 +287,8 @@ export default () => {
                             <iframe className="header__github-button" src="https://ghbtns.com/github-btn.html?user=theia-ide&repo=theia&type=fork&count=true" frameBorder={0} scrolling={0} />
                         </div>
                     </div>
-                    <div className="header__screenshot-container">
-                        <img className="header__screenshot" src={TheiaScreenShot} alt="Screenshot of Theia IDE" />
-                    </div>
+
+                    <Screenshot />
 
                     <div className="row">
 
@@ -486,23 +441,7 @@ export default () => {
 
                 </main>
 
-                {/* ***** Footer ***** */}
-
-                <footer className="footer">
-                    <div className="footer__icons">
-                        <a href="https://twitter.com/theia_ide" target="_blank">
-                            <img src={TwitterLogo} alt="Twitter Logo" className="footer__icon" />
-                        </a>
-                        <a href="https://github.com/theia-ide/theia" target="_blank">
-                            <img src={GithubLogo} alt="Github Logo" className="footer__icon" />
-                        </a>
-                        <a href="https://spectrum.chat/theia" target="_blank">
-                            <img src={SpectrumLogo} alt="Spectrum Logo" className="footer__icon" />
-                        </a>
-                    </div>
-                    <p>Any questions, feedback or requests? Please, get in contact.</p>
-                    <p className="footer__copyright">© 2019 by Typefox | Imprint</p>
-                </footer>
+                <Footer />
 
             </Index>
         </Layout>

@@ -10,7 +10,6 @@ const Layout = ({ children }) => {
     return (
         <>
             <Global styles={css`
-
                 /* --------------------------------------------- */
                 /* ----- Basic Setup ----- */
                 /* --------------------------------------------- */
@@ -40,6 +39,11 @@ const Layout = ({ children }) => {
                     overflow-x: hidden;
                 }
 
+                a {
+                    text-decoration: none;
+                    color: #6692d4;
+                }
+
                 a,
                 button {
                     cursor: pointer;
@@ -49,7 +53,6 @@ const Layout = ({ children }) => {
                 input {
                     font-family: inherit;
                 }
-
 
                 /* --------------------------------------------- */
                 /* ----- Headlines and Paragraphs ----- */

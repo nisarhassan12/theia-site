@@ -7,7 +7,7 @@ import Mutliply from '../resources/multiply.svg'
 
 const StyledNav = styled.div`
 
-    @media(max-width: ${breakpoints.sm}) {
+    @media(max-width: ${breakpoints.xmd}) {
         position: absolute;
         top: 0;
         left: 0;
@@ -20,7 +20,7 @@ const StyledNav = styled.div`
         padding-top: 10rem;
         margin-bottom: 10rem;
 
-        @media(max-width: ${breakpoints.sm}) {
+        @media(max-width: ${breakpoints.xmd}) {
             padding-top: 0;
         }
 
@@ -38,7 +38,7 @@ const StyledNav = styled.div`
                 height: 4rem;
             }
 
-            @media(min-width: ${breakpoints.sm}) {
+            @media(min-width: ${breakpoints.xmd}) {
                 display: none;
             }
         }
@@ -48,8 +48,9 @@ const StyledNav = styled.div`
             justify-content: flex-end;
             list-style: none;
             width: 100%;
+            z-index: 1000;
 
-            @media(max-width: ${breakpoints.sm}) {
+            @media(max-width: ${breakpoints.xmd}) {
                 flex-direction: column;
                 text-align: center;
                 justify-content: center;
@@ -63,13 +64,13 @@ const StyledNav = styled.div`
 
             margin-bottom: 3rem;
 
-            @media(min-width: ${breakpoints.sm}) {
+            @media(min-width: ${breakpoints.xmd}) {
                 &:not(:last-child) {
                     margin-right: 3rem;
                 }
             }
 
-            @media(max-width: ${breakpoints.sm}) {
+            @media(max-width: ${breakpoints.xmd}) {
                 width: 100vw;
             }
         }
@@ -118,10 +119,10 @@ class Nav extends React.Component {
                         this.state.isNavRendered &&
                         <ul className="nav__items">
                             <li className="nav__item" onClick={event}>
-                                <a href="#features" className="nav__link">Features</a>
+                                <a href="/#features" className="nav__link">Features</a>
                             </li>
                             <li className="nav__item" onClick={event}>
-                                <Link to="/docs" className="nav__link">Documentation</Link>
+                                <Link to="/docs" className="nav__link" activeClassName="active">Documentation</Link>
                             </li>
                             <li className="nav__item" onClick={event}>
                                 <a href="https://spectrum.chat/theia" target="_blank" className="nav__link">Comunity</a>

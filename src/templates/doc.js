@@ -4,22 +4,21 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 export const query = graphql`
-  query {
-        mdx(frontmatter: {slug: {eq: "index"}}) {
-            frontmatter {
-                title
-                slug
-            }
-            body
-        }
+  query($slug: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+      }
+      body
     }
+  }
 `
 
-const Docs = ({ data: { mdx: doc } }) => (
+const DocTemplate = ({ data: { mdx: doc } }) => (
     <DocsLayout>
         <h1>{doc.title}</h1>
         <MDXRenderer>{doc.body}</MDXRenderer>
     </DocsLayout>
 )
 
-export default Docs
+export default DocTemplate

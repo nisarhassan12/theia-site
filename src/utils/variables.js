@@ -12,5 +12,6 @@ export const grid = {
 
 export const breakpoints = {
     sm: '34rem',
+    xmd: '50rem',
     md: '70rem',
 }
