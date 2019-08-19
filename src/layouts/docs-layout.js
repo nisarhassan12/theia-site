@@ -25,13 +25,16 @@ const DocContainer = styled.div`
 
     .docs-row {
         width: 85%;
-        max-wdith: 960px;
-        min-height: 1000px;
+        max-wdith: 96rem;
         margin: 0 auto;
         padding-bottom: 10rem;
 
         @media(max-width: ${breakpoints.sm}) {
             width: 100%;
+        }
+
+        @media(min-width: ${breakpoints.sm}) {
+            min-height: 90rem;
         }
     }
 
