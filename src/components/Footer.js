@@ -9,12 +9,10 @@ const StyledFooter = styled.div`
     .footer {
         padding: 4rem 0;
         text-align: center;
-        background-image: url(${Background});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         border-top: 10px solid #f8f8f8;
-
 
         &__icons {
             display: flex;
@@ -39,9 +37,9 @@ const StyledFooter = styled.div`
     }
 `
 
-const Footer = () => (
+const Footer = ({background}) => (
     <StyledFooter>
-        <footer className="footer">
+        <footer className="footer" style={{background: background ? `url(${Background})` : null}}>
             <div className="footer__icons">
                 <a href="https://twitter.com/theia_ide" target="_blank">
                     <img src={TwitterLogo} alt="Twitter Logo" className="footer__icon" />

@@ -442,7 +442,7 @@ export default () => {
 
                 </main>
 
-                <Footer />
+                <Footer background={true} />
 
             </Index>
         </Layout>
