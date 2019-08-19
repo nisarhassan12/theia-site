@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 import { breakpoints } from '../utils/variables'
 import Layout from '../layouts/layout'
 import Nav from '../components/Nav'
@@ -353,8 +354,8 @@ export default () => {
                                 <p>
                                     Eclipse Theia is entirely written in TypeScript and clearly separates the
                                     UI frontend from the backend. The frontend runs in modern
-                                    browsers or as aFit
-                                        <a href="http://typefox.io/theia-vs-code-in-the-cloud" target="_blank">Desktop app using
+                                    browsers or as a Fit
+                                        <a href="http://typefox.io/theia-vs-code-in-the-cloud" target="_blank"> Desktop app using
                                         Electron</a> with either local or remote (cloud) backends.
                                     </p>
                             </div>
@@ -365,11 +366,11 @@ export default () => {
                                 </div>
                                 <p>
                                     Theia applications consist of extensions.
-                                        <a href="https://github.com/theia-ide/theia-apps" target="_blank">Composing
+                                        <a href="https://github.com/theia-ide/theia-apps" target="_blank"> Composing
                                         a custom IDE-like product</a> is as easy as listing all needed
                                     extensions in a package.json file. Adding new
-                                        functionality by <a href="http://www.theia-ide.org/doc/Authoring_Extensions.html">
-                                        implementing your own extensions</a> or plug-ins is easy.
+                                        functionality by implementing <Link to='/docs/authoring_extensions'>
+                                        your own extensions</Link> or plug-ins is easy.
                                     </p>
                             </div>
                             <div className="feature">
