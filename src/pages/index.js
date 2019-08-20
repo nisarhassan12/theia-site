@@ -99,6 +99,7 @@ const Index = styled.div`
         &__image {
             height: 100%;
             max-width: 17rem;
+            object-fit: contain;
 
             &-container {
                 height: 4.4rem;
@@ -368,7 +369,7 @@ export default () => {
                                     Theia applications consist of extensions.
                                         <a href="https://github.com/theia-ide/theia-apps" target="_blank"> Composing
                                         a custom IDE-like product</a> is as easy as listing all needed
-                                    extensions in a package.json file. Adding new
+                                extensions in a package.json file. Adding new
                                         functionality by implementing <Link to='/docs/authoring_extensions'>
                                         your own extensions</Link> or plug-ins is easy.
                                     </p>
@@ -399,44 +400,44 @@ export default () => {
                     {/* ***** Section Promo ***** */}
 
                     <section className="promos">
-                    <div className="row">
-                        <div className="promo">
-                        <div className="promo__text">
-                            <h3 className="heading-tertiary">Supports JavaScript, Java, Python and many more</h3>
-                            <p>Built on the <a href="https://microsoft.github.io/language-server-protocol/" target="_blank">Language Server Protocol</a>,
+                        <div className="row">
+                            <div className="promo">
+                                <div className="promo__text">
+                                    <h3 className="heading-tertiary">Supports JavaScript, Java, Python and many more</h3>
+                                    <p>Built on the <a href="https://microsoft.github.io/language-server-protocol/" target="_blank">Language Server Protocol</a>,
                             Theia benefits from a growing ecosystem of <e>over 60 available language servers</e>, delivering intelligent editing support
                             for all major programming languages.</p>
-                        </div>
-                        <div className="promo__media">
-                            <video autoPlay loop muted playsInline className="promo__video">
-                            <source src={CompletionVideo} type="video/mp4" />
-                            </video>
-                        </div>
-                        </div>
-                        <div className="promo">
-                        <div className="promo__media">
-                            <video autoPlay loop muted playsInline className="promo__video">
-                            <source src={TermianlVideo} type="video/mp4" />
-                            </video>
-                        </div>
-                        <div className="promo__text">
-                            <h3 className="heading-tertiary">Integrated Terminal</h3>
-                            <p>Theia integrates a full featured terminal, that reconnects on browser reload keeping the full history.</p>
-                        </div>
-                        </div>
-                        <div className="promo">
-                        <div className="promo__text">
-                            <h3 className="heading-tertiary">Flexible Layout</h3>
-                            <p>Theia's shell is based on <a href="https://phosphorjs.github.io/" target="blank">PhosphorJS</a>,
+                                </div>
+                                <div className="promo__media">
+                                    <video autoPlay loop muted playsInline className="promo__video">
+                                        <source src={CompletionVideo} type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className="promo">
+                                <div className="promo__media">
+                                    <video autoPlay loop muted playsInline className="promo__video">
+                                        <source src={TermianlVideo} type="video/mp4" />
+                                    </video>
+                                </div>
+                                <div className="promo__text">
+                                    <h3 className="heading-tertiary">Integrated Terminal</h3>
+                                    <p>Theia integrates a full featured terminal, that reconnects on browser reload keeping the full history.</p>
+                                </div>
+                            </div>
+                            <div className="promo">
+                                <div className="promo__text">
+                                    <h3 className="heading-tertiary">Flexible Layout</h3>
+                                    <p>Theia's shell is based on <a href="https://phosphorjs.github.io/" target="blank">PhosphorJS</a>,
                             which provides a solid foundation for dragable dock layouts.</p>
+                                </div>
+                                <div className="promo__media">
+                                    <video autoPlay loop muted playsInline className="promo__video">
+                                        <source src={LayoutVideo} type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
                         </div>
-                        <div className="promo__media">
-                            <video autoPlay loop muted playsInline className="promo__video">
-                            <source src={LayoutVideo} type="video/mp4" />
-                            </video>
-                        </div>
-                        </div>
-                    </div>
                     </section>
 
 
