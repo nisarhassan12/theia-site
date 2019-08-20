@@ -83,8 +83,8 @@ const DocContainer = styled.div`
 
 `
 
-const DocsLayout = ({children}) => (
-    <Layout>
+const DocsLayout = ({children, canonical}) => (
+    <Layout canonical={canonical}>
         <DocContainer>
             <DocSideBar />
             <DocTopicChooser />

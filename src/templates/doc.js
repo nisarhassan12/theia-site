@@ -7,7 +7,8 @@ export const query = graphql`
   query($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
-        title
+        title,
+        slug
       }
       body
     }
@@ -15,7 +16,7 @@ export const query = graphql`
 `
 
 const DocTemplate = ({ data: { mdx: doc } }) => (
-    <DocsLayout>
+    <DocsLayout canonical={`https://theia-ide.org/docs/${doc.frontmatter.slug}/`}>
         <h1>{doc.title}</h1>
         <MDXRenderer>{doc.body}</MDXRenderer>
     </DocsLayout>

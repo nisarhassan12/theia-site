@@ -16,7 +16,7 @@ export const query = graphql`
 `
 
 const Docs = ({ data: { mdx: doc } }) => (
-    <DocsLayout>
+    <DocsLayout canonical='https://theia-ide.org/docs/'>
         <h1>{doc.title}</h1>
         <MDXRenderer>{doc.body}</MDXRenderer>
     </DocsLayout>

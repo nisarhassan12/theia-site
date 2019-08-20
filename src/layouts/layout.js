@@ -5,7 +5,7 @@ import useSiteMetadata from '../hooks/use-site-metadata'
 import { fontSizes, colors, grid, breakpoints } from '../utils/variables'
 import Favicon from '../resources/favicon.ico'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, canonical }) => {
     const { title, description } = useSiteMetadata()
     return (
         <>
@@ -107,7 +107,9 @@ const Layout = ({ children }) => {
                 <meta name='description' content={description} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#FFFFFF" />
-	            <link rel="canonical" href="https://www.theia-ide.org/" />
+                {
+                    canonical ? <link rel="canonical" href={canonical} /> : null
+                }
 	            <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
                 <link rel="shortcut icon" href={Favicon} />

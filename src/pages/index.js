@@ -265,7 +265,7 @@ const Index = styled.div`
 
 export default () => {
     return (
-        <Layout>
+        <Layout canonical='https://theia-ide.org/'>
             <Index>
 
                 {/* ***** Header ***** */}
