@@ -21,6 +21,10 @@ const DocContainer = styled.div`
         @media(min-width: ${breakpoints.xmd}) {
             width: 70%;
         }
+
+        @media(max-width: ${breakpoints.xmd}) {
+            min-width: 100vw;
+        }
     }
 
     .docs-row {
