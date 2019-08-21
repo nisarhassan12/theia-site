@@ -101,7 +101,7 @@ class Nav extends React.Component {
     }
 
     render() {
-        const event = window.innerWidth <= 543 ? this.toggleNavigation : null
+        const event = (typeof window !== 'undefined' && window.innerWidth <= 543) ? this.toggleNavigation : null
         return (
             <StyledNav>
                 <nav className="nav">
