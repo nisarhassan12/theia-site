@@ -61,7 +61,7 @@ const Index = styled.div`
         &__github-details {
             display: flex;
             justify-content: flex-end;
-            margin: 10rem 0 0;
+            margin: 5rem 0 0;
         }
 
         iframe {
@@ -445,7 +445,6 @@ export default () => {
                             </div>
                         </div>
                     </section>
-
 
                 </main>
 

@@ -17,8 +17,8 @@ const StyledNav = styled.div`
 
     .nav {
         position: relative;
-        padding-top: 10rem;
-        margin-bottom: 10rem;
+        padding-top: 5rem;
+        margin-bottom: 7rem;
 
         @media(max-width: ${breakpoints.xmd}) {
             padding-top: 0;
