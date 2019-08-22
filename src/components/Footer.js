@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 import Background from '../resources/background-image.png'
 import TwitterLogo from '../resources/twitter.svg'
 import GithubLogo from '../resources/github.svg'
@@ -17,7 +18,7 @@ const StyledFooter = styled.div`
         &__icons {
             display: flex;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         &__icon {
@@ -27,7 +28,7 @@ const StyledFooter = styled.div`
 
         a {
             &:not(:last-child) {
-                margin-right: 1.5rem;
+                margin-right: 3rem;
             }
         }
 
@@ -51,8 +52,8 @@ const Footer = ({background}) => (
                     <img src={SpectrumLogo} alt="Spectrum Logo" className="footer__icon" />
                 </a>
             </div>
-            <p>Any questions, feedback or requests? Please, get in contact.</p>
-            <p className="footer__copyright">© 2019 by Typefox | Imprint</p>
+            <p>Any questions, feedback or requests? <a href="#">Please, get in touch.</a></p>
+            <p className="footer__copyright">© 2019 by Typefox | <Link to="/imprint">Imprint</Link></p>
         </footer>
     </StyledFooter>
 )
