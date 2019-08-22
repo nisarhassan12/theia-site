@@ -18,7 +18,7 @@ const StyledFooter = styled.div`
         &__icons {
             display: flex;
             justify-content: center;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         &__icon {
@@ -26,14 +26,14 @@ const StyledFooter = styled.div`
             display: block;
         }
 
-        a {
+        &__link {
             &:not(:last-child) {
                 margin-right: 3rem;
             }
         }
 
         &__copyright {
-            margin-top: 5rem;
+            margin: 2rem 0;
         }
     }
 `
@@ -41,19 +41,20 @@ const StyledFooter = styled.div`
 const Footer = ({background}) => (
     <StyledFooter>
         <footer className="footer" style={{background: background ? `url(${Background})` : null}}>
+            <p>Any questions, feedback or requests? Please, get in touch...</p>
             <div className="footer__icons">
-                <a href="https://twitter.com/theia_ide" target="_blank">
+                <a href="https://twitter.com/theia_ide" target="_blank" className="footer__link">
                     <img src={TwitterLogo} alt="Twitter Logo" className="footer__icon" />
                 </a>
-                <a href="https://github.com/theia-ide/theia" target="_blank">
+                <a href="https://github.com/theia-ide/theia" target="_blank" className="footer__link">
                     <img src={GithubLogo} alt="Github Logo" className="footer__icon" />
                 </a>
-                <a href="https://spectrum.chat/theia" target="_blank">
+                <a href="https://spectrum.chat/theia" target="_blank" className="footer__link">
                     <img src={SpectrumLogo} alt="Spectrum Logo" className="footer__icon" />
                 </a>
             </div>
-            <p>Any questions, feedback or requests? <a href="#">Please, get in touch.</a></p>
-            <p className="footer__copyright">© 2019 by Typefox | <Link to="/imprint">Imprint</Link></p>
+            <p className="footer__copyright"><a target="_blank" href=" http://www.eclipse.org/legal/privacy.php">Privacy Policy</a> | <a target="_blank" href=" http://www.eclipse.org/legal/termsofuse.php">Terms of Use</a> | <a target="_blank" href="http://www.eclipse.org/legal/copyright.php">Copy Right Agent</a></p>
+            <p>© 2019 by <a href="https://typefox.io" target="_blank">Typefox</a></p>
         </footer>
     </StyledFooter>
 )
