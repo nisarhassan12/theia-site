@@ -121,6 +121,12 @@ const Index = styled.div`
             &--arm {
                 transform: scale(.6);
             }
+
+            &--sap {
+                @media(min-width: ${breakpoints.md}) {
+                    transform: translateX(2.5rem);
+                }
+            }
         }
     }
 
